@@ -54,6 +54,8 @@ class Penguin {
 
   void movePenguin() {
    // TODO: add the current values of the x and y 'speed' variables to the x- and y-coordinates variables 
+   // x = xspeed;
+   // y = yspeed;
   }
   
   void addMotion() {
