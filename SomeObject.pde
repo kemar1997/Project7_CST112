@@ -48,6 +48,8 @@ class Penguin {
     
     // Pupils
     fill(tempBlk);
+    ellipse(x+18.5, y-112, 10, 10);
+    ellipse(x-18.5, y-112, 10, 10);
   }
 
   void movePenguin() {
