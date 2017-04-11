@@ -3,6 +3,10 @@ class Penguin {
   float x;
   float y;
   
+  // Variables for the movePenguin function
+  float xspeed;
+  float yspeed;
+  
   /*----------------------------------------------------------------*/
   
   // Constructor
@@ -17,6 +21,7 @@ class Penguin {
   
   void drawPenguin(float tempBlk, float tempWhite) {
     
+    noStroke();
     strokeWeight(0);
     
     // Penguin body
@@ -54,16 +59,54 @@ class Penguin {
 
   void movePenguin() {
    // TODO: add the current values of the x and y 'speed' variables to the x- and y-coordinates variables 
-   // x = xspeed;
-   // y = yspeed;
+   x += xspeed;
+   y += yspeed;
   }
   
   void addMotion() {
-    //TODO: Keypressed actions, look back to word document
+    //TODO: Keypressed actions, add functionality to move the object according to which arrow key is pressed
+    // Add keyPressed inside here
+    if(keyPressed == true) {
+      if(keyCode == UP)
+      {
+      //start moving up
+        yspeed = -1;
+      } else {
+        yspeed = 0;
+      }
+      
+      
+      if(keyCode == LEFT)
+      {
+      //start moving left
+        xspeed = -1;
+      } else {
+        xspeed = 0;
+      }
+      
+      if(keyCode == DOWN)
+      {
+      //start moving down
+        yspeed = 1;
+      } else {
+        yspeed = 0;
+      }
+      
+      if(keyCode == RIGHT) 
+      {
+        //start moving right
+        xspeed = 1;
+      } else {
+        xspeed = 0;
+      }
+    }
+   
   }
   
   void constrainObj() {
-    //TODO: use the constrain() function to limit both the x- and y-coordinates within the boundaries of the output window so that the object never exits the window 
+    //TODO: use the constrain() function to limit both the x- and y-coordinates within the boundaries of the output window so that the object never exits the window
+    x = constrain(x, 150, 525);
+    y = constrain(y, 150, 525);
   }
-
+ 
 }

@@ -15,10 +15,17 @@ void setup() {
 }
 
 void draw() {
+  drawBG();
   p.drawPenguin(0, 255);
+  p.movePenguin();
+  p.addMotion();
+  p.constrainObj();
 }
 
   
 void drawBG() {
-  
+  for (int i = 0; i< width; i++) {
+    stroke(i, i, i);
+    line(0,i,width,i);
+  }
 }
