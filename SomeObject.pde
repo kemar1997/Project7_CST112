@@ -71,6 +71,8 @@ class Penguin {
       {
       //start moving up
         yspeed = -1;
+      } else if(keyCode == DOWN) {
+        yspeed = 1;
       } else {
         yspeed = 0;
       }
@@ -80,25 +82,27 @@ class Penguin {
       {
       //start moving left
         xspeed = -1;
-      } else {
-        xspeed = 0;
-      }
-      
-      if(keyCode == DOWN)
-      {
-      //start moving down
-        yspeed = 1;
-      } else {
-        yspeed = 0;
-      }
-      
-      if(keyCode == RIGHT) 
-      {
-        //start moving right
+      } else if(keyCode == RIGHT) {
         xspeed = 1;
       } else {
         xspeed = 0;
       }
+      
+      //if(keyCode == DOWN)
+      //{
+      ////start moving down
+      //  yspeed = 1;
+      //} else {
+      //  yspeed = 0;
+      //}
+      
+      //if(keyCode == RIGHT) 
+      //{
+      //  //start moving right
+      //  xspeed = 1;
+      //} else {
+      //  xspeed = 0;
+      //}
     }
    
   }
